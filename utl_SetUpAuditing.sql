@@ -3,7 +3,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 -- =============================================
--- Author:		David Darling
+-- Author:	David Darling
 -- Create date: 2017-10-31
 -- Description:	This T-SQL procedure creates both a
 -- server auditor as well as a database auditor.
