@@ -8,7 +8,7 @@ GO
 -- Description:	Table-by-table, create an audit
 --				      trigger for each user-table
 -- =============================================
-CREATE PROCEDURE [dbo].[usp_Create_Audit_Trigger_on_Tables]
+CREATE PROCEDURE [dbo].[utl_Create_Audit_Trigger_on_Tables]
 	@data_schema_name sysname = 'dbo', 
 	@data_trigger_prefix sysname = 'trg',
 	@data_trigger_suffix sysname = 'Auditor',
@@ -40,7 +40,7 @@ BEGIN
 	while @@FETCH_STATUS = 0
 	BEGIN
 
-		EXEC	@return_value = [dbo].[usp_Create_Audit_Trigger_on_Table]
+		EXEC	@return_value = [dbo].[utl_Create_Audit_Trigger_on_Table]
 				@data_schema_name = @data_schema_name,
 				@data_table_name = @data_table_name,
 				@data_trigger_prefix = @data_trigger_prefix,
