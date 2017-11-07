@@ -1,15 +1,14 @@
-/****** Object:  StoredProcedure [dbo].[usp_Create_Audit_Trigger_on_Table]    Script Date: 11/7/2017 4:25:44 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 -- =============================================
--- Author:		  David Darling
+-- Author:	David Darling
 -- Create date: 2017-11-07
 -- Description:	Creates an auditing trigger
---				      on the specified table
+--		on the specified table
 -- =============================================
-CREATE PROCEDURE [dbo].[usp_Create_Audit_Trigger_on_Table] 
+CREATE PROCEDURE [dbo].[utl_Create_Audit_Trigger_on_Table] 
 	@data_schema_name sysname = 'dbo', 
 	@data_table_name sysname = 'TestTable',
 	@data_trigger_prefix sysname = 'trg',
