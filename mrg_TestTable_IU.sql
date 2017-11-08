@@ -43,8 +43,8 @@ BEGIN
 		Target.ID = Source.ID
 	WHEN MATCHED THEN
 		UPDATE SET
-			Target.model = @model,
-			Target.[description] = @description
+			Target.model = ISNULL(@model, Target.model),
+			Target.[description] = ISNULL(@description, Target.[description])
 	WHEN NOT MATCHED BY TARGET THEN
 		INSERT (model, [description])
 		VALUES (@model, @description);
