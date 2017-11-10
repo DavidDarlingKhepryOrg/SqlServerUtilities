@@ -11,6 +11,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+-- =============================================
+-- Author:	David Darling
+-- Create date: 2017-11-10
+-- Description:	Find missing objects between the
+-- 		specified old and new schemata.
+-- =============================================
+
 declare @oldSchema1 sysname; set @oldSchema1 = 'old_schema_name1';
 declare @oldSchema2 sysname; set @oldSchema2 = NULL;
 declare @newSchema1 sysname; set @newSchema1 = 'new_schema_name1';
