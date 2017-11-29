@@ -14,6 +14,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+-- =============================================
+-- Author:	David Darling
+-- Create date: 2017-11-07
+-- Description:	Creates an auditing table
+-- =============================================
+
 SET ANSI_NULLS ON
 GO
 
